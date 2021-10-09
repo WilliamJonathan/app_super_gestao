@@ -13,14 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'Olá seja bem vindo ao curso';
-});
+/*comando do artisan para gerar um novo controller
+php artisan make:controller NomeControladorController
+*/
 
-Route::get('/sobre-nos', function () {
-    return 'Sobre nós';
-});
+Route::get('/', 'PrincipalController@principal');
 
-Route::get('/contato', function () {
-    return 'Contato';
-});
+Route::get('/sobre-nos', 'SobreNosController@sobreNos');
+
+Route::get('/contato', 'ContatoController@contato');
