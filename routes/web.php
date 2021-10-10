@@ -25,10 +25,11 @@ Route::get('/login', function(){return 'Login';})->name('site.login');
 //grupo de rotas
 Route::prefix('/app')->group(function(){
     Route::get('/clientes', function(){return 'Clientes';})->name('app.clientes');
-    Route::get('/fornecedores', function(){return 'Fornecedores';})->name('app.fornecedores');
+    Route::get('/fornecedores', 'FornecedorController@index')->name('app.fornecedores');
     Route::get('/produtos', function(){return 'Produtos';})->name('app.produtos');
 });
 
+//rota de fallback
 Route::fallback(function(){
     echo 'A rota acessada não existe. <a href="'.route('site.index').'">clique aqui</a> para ir para pagina inicial';
 });
