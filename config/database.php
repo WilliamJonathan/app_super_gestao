@@ -32,6 +32,14 @@ return [
     | choice installed on your machine before you begin development.
     |
     */
+    
+    /**
+     * php -r "var_dump(extension_loaded('pdo_mysql'));"
+     * este comando verifica se o pdo do mysql esta ativo no php.ini
+     * *
+     * php artisan migrate
+     * este comando executa uma migration
+     */
 
     'connections' => [
 
