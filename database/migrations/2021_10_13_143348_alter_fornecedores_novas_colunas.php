@@ -34,7 +34,7 @@ class AlterFornecedoresNovasColunas extends Migration
      /**
       * php artisan migrate:rollback
       * para executaro rollback das migrates executa o comando acima
-      * caso queira voltar mais de um passo no rollback executar o conando abaixo
+      * caso queira voltar mais de um passo no rollback executar o comando abaixo
       * php artisan migrate:rollback --step=?
       */
     public function down()
